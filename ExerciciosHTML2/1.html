@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício HTML</title>
+</head>
+
+<body background="patrick-spongebob-48512922.gif">
+    <header>
+        <h1>CABEÇALHO (&lt;H&gt;)</h1>
+        <nav>
+            <ul>
+                <li><a href="#desenhos">Desenhos</a></li>
+                <li><a href="#formulario">Formulário</a></li>
+                <li><a href="#top">Topo</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="desenhos">
+            <h2>Informações sobre Desenhos</h2>
+            <table border="1">
+                <caption>Informações sobre Desenhos</caption>
+                <tr>
+                    <th>Nome</th>
+                    <th>Gênero</th>
+                    <th>Ano de Lançamento</th>
+                </tr>
+                <tr>
+                    <td>Bob Esponja</td>
+                    <td>Comédia</td>
+                    <td>1999</td>
+                </tr>
+                <tr>
+                    <td>Os Simpsons</td>
+                    <td>Comédia</td>
+                    <td>1989</td>
+                </tr>
+                <tr>
+                    <td>Dragon Ball Z</td>
+                    <td>Ação</td>
+                    <td>1989</td>
+                </tr>
+                <tr>
+                    <td>Avatar: A Lenda de Aang</td>
+                    <td>Aventura</td>
+                    <td>2005</td>
+                </tr>
+            </table>
+        </section>
+
+        <section id="formulario">
+            <h2>Formulário sobre Desenhos</h2>
+            <p>Preencha as informações sobre seu desenho favorito.</p>
+            <form id="desenhoForm" action="#top">
+                <label for="nome">Nome do Desenho:</label><br>
+                <input type="text" id="nome" name="nome"><br><br>
+
+                <label for="genero">Gênero:</label><br>
+                <input type="text" id="genero" name="genero"><br><br>
+
+                <label for="ano">Ano de Lançamento:</label><br>
+                <input type="number" id="ano" name="ano"><br><br>
+
+                <input type="submit" value="Enviar">
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">Ir para o topo</button>
+        <p>&copy; 2025 Exercício HTML</p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício HTML5 Puro</title>
+</head>
+
+<body>
+    <!-- 1. Tags Semânticas -->
+    <header>
+        <h1>Explorando HTML5 Puro</h1>
+        <nav>
+            <ul>
+                <li><a href="#semantica">Semântica</a></li>
+                <li><a href="#formularios">Formulários</a></li>
+                <li><a href="#midia">Mídia</a></li>
+                <li><a href="#graficos">Gráficos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <article>
+            <section id="semantica">
+                <h2>Elementos Semânticos do HTML5</h2>
+                <p>HTML5 introduziu várias tags semânticas que melhoram a estrutura e acessibilidade:</p>
+
+                <details>
+                    <summary>Clique para ver exemplos de tags semânticas</summary>
+                    <ul>
+                        <li><code>&lt;header&gt;</code> - Cabeçalho da página ou seção</li>
+                        <li><code>&lt;nav&gt;</code> - Área de navegação</li>
+                        <li><code>&lt;main&gt;</code> - Conteúdo principal</li>
+                        <li><code>&lt;article&gt;</code> - Conteúdo independente</li>
+                        <li><code>&lt;section&gt;</code> - Seção temática</li>
+                        <li><code>&lt;aside&gt;</code> - Conteúdo relacionado</li>
+                        <li><code>&lt;footer&gt;</code> - Rodapé</li>
+                        <li><code>&lt;figure&gt;</code> e <code>&lt;figcaption&gt;</code> - Para imagens e legendas</li>
+                        <li><code>&lt;time&gt;</code> - Para datas e horas</li>
+                        <li><code>&lt;mark&gt;</code> - <mark>Texto destacado</mark></li>
+                        <li><code>&lt;progress&gt;</code> - <progress value="75" max="100"></progress></li>
+                    </ul>
+                </details>
+            </section>
+
+            <!-- 2. Elementos e Atributos de Formulários -->
+            <section id="formularios">
+                <h2>Novos Elementos e Atributos de Formulários</h2>
+                <p>HTML5 trouxe vários novos tipos de input e atributos para formulários:</p>
+
+                <form id="advancedForm">
+                    <fieldset>
+                        <legend>Informações Pessoais</legend>
+
+                        <label for="nome">Nome Completo:</label><br>
+                        <input type="text" id="nome" name="nome" required placeholder="Digite seu nome"
+                            autofocus><br><br>
+
+                        <label for="email">E-mail:</label><br>
+                        <input type="email" id="email" name="email" required placeholder="seu@email.com"><br><br>
+
+                        <label for="tel">Telefone:</label><br>
+                        <input type="tel" id="tel" name="tel" pattern="[0-9]{11}" placeholder="11999999999"><br><br>
+
+                        <label for="nascimento">Data de Nascimento:</label><br>
+                        <input type="date" id="nascimento" name="nascimento"><br><br>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Preferências</legend>
+
+                        <label for="cor">Cor Favorita:</label><br>
+                        <input type="color" id="cor" name="cor" value="#ff0000"><br><br>
+
+                        <label for="volume">Volume Preferido:</label><br>
+                        <input type="range" id="volume" name="volume" min="0" max="100" step="5" value="50"><br><br>
+
+                        <label for="site">Seu Site:</label><br>
+                        <input type="url" id="site" name="site" placeholder="https://exemplo.com"><br><br>
+
+                        <label for="pesquisa">Pesquisa:</label><br>
+                        <input type="search" id="pesquisa" name="pesquisa" placeholder="Pesquisar..."><br><br>
+
+                        <label for="numero">Número Favorito:</label><br>
+                        <input type="number" id="numero" name="numero" min="1" max="10" step="1"><br><br>
+
+                        <label for="hora">Hora Preferida:</label><br>
+                        <input type="time" id="hora" name="hora"><br><br>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Outros</legend>
+
+                        <label for="arquivo">Envie seu arquivo:</label><br>
+                        <input type="file" id="arquivo" name="arquivo" accept=".pdf,.doc,.docx"><br><br>
+
+                        <label for="datalist">Escolha uma opção:</label><br>
+                        <input list="opcoes" id="datalist" name="datalist"><br>
+                        <datalist id="opcoes">
+                            <option value="Opção 1">
+                            <option value="Opção 2">
+                            <option value="Opção 3">
+                        </datalist><br>
+
+                        <label for="mensagem">Mensagem:</label><br>
+                        <textarea id="mensagem" name="mensagem" rows="4"
+                            placeholder="Digite sua mensagem..."></textarea><br><br>
+                    </fieldset>
+
+                    <button type="submit">Enviar</button>
+                    <button type="reset">Limpar</button>
+                </form>
+            </section>
+
+            <!-- 3. Mídia (Áudio, Vídeo) -->
+            <section id="midia">
+                <h2>Elementos de Mídia</h2>
+                <p>HTML5 introduziu elementos nativos para áudio e vídeo:</p>
+
+                <h3>Vídeo</h3>
+                <video width="400" controls>
+                    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                    Seu navegador não suporta o elemento de vídeo.
+                </video>
+
+                <h3>Áudio</h3>
+                <audio controls>
+                    <source src="https://www.w3schools.com/html/horse.ogg" type="audio/ogg">
+                    Seu navegador não suporta o elemento de áudio.
+                </audio>
+            </section>
+
+            <!-- 4. Elementos Gráficos (Canvas, SVG) -->
+            <section id="graficos">
+                <h2>Elementos Gráficos</h2>
+
+                <h3>SVG</h3>
+                <p>Gráficos vetoriais escaláveis:</p>
+                <svg width="400" height="200">
+                    <rect x="50" y="50" width="300" height="100" fill="#1e90ff" stroke="#333" stroke-width="2" rx="10"
+                        ry="10" />
+                    <circle cx="200" cy="100" r="40" fill="#ff6347" />
+                    <text x="200" y="105" font-family="Arial" font-size="20" text-anchor="middle"
+                        fill="white">SVG</text>
+                </svg>
+            </section>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Exercício HTML5 Puro</p>
+        <a href="#">Voltar ao Topo</a>
+    </footer>
+</body>
+
+</html>
