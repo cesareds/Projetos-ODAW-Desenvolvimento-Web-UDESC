@@ -4,13 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercício HTML5 Puro</title>
+    <title>HTML5 </title>
 </head>
 
 <body>
     <!-- 1. Tags Semânticas -->
     <header>
-        <h1>Explorando HTML5 Puro</h1>
+        <h1>HTML5</h1>
         <nav>
             <ul>
                 <li><a href="#semantica">Semântica</a></li>
@@ -25,8 +25,6 @@
         <article>
             <section id="semantica">
                 <h2>Elementos Semânticos do HTML5</h2>
-                <p>HTML5 introduziu várias tags semânticas que melhoram a estrutura e acessibilidade:</p>
-
                 <details>
                     <summary>Clique para ver exemplos de tags semânticas</summary>
                     <ul>
@@ -55,58 +53,47 @@
                         <legend>Informações Pessoais</legend>
 
                         <label for="nome">Nome Completo:</label><br>
-                        <input type="text" id="nome" name="nome" required placeholder="Digite seu nome"
-                            autofocus><br><br>
+                        <input type="text" name="nome" required placeholder="Digite seu nome" autofocus><br><br>
 
                         <label for="email">E-mail:</label><br>
-                        <input type="email" id="email" name="email" required placeholder="seu@email.com"><br><br>
-
-                        <label for="tel">Telefone:</label><br>
-                        <input type="tel" id="tel" name="tel" pattern="[0-9]{11}" placeholder="11999999999"><br><br>
+                        <input type="email" name="email" required placeholder="seu@email.com"><br><br>
 
                         <label for="nascimento">Data de Nascimento:</label><br>
-                        <input type="date" id="nascimento" name="nascimento"><br><br>
+                        <input type="date" name="nascimento"><br><br>
                     </fieldset>
 
                     <fieldset>
                         <legend>Preferências</legend>
 
-                        <label for="cor">Cor Favorita:</label><br>
-                        <input type="color" id="cor" name="cor" value="#ff0000"><br><br>
+                        <label for="cor">Selecionar cor:</label><br>
+                        <input type="color" name="cor" value="#ff0000"><br><br>
 
-                        <label for="volume">Volume Preferido:</label><br>
-                        <input type="range" id="volume" name="volume" min="0" max="100" step="5" value="50"><br><br>
+                        <label for="volume">Selecionar range:</label><br>
+                        <input type="range" name="volume" min="0" max="100" step="5" value="50"><br><br>
 
-                        <label for="site">Seu Site:</label><br>
-                        <input type="url" id="site" name="site" placeholder="https://exemplo.com"><br><br>
+                        <label for="numero">Selecionar número:</label><br>
+                        <input type="number" name="numero" min="1" max="10" step="1"><br><br>
 
-                        <label for="pesquisa">Pesquisa:</label><br>
-                        <input type="search" id="pesquisa" name="pesquisa" placeholder="Pesquisar..."><br><br>
-
-                        <label for="numero">Número Favorito:</label><br>
-                        <input type="number" id="numero" name="numero" min="1" max="10" step="1"><br><br>
-
-                        <label for="hora">Hora Preferida:</label><br>
-                        <input type="time" id="hora" name="hora"><br><br>
+                        <label for="hora">Selecionar horario:</label><br>
+                        <input type="time" name="hora"><br><br>
                     </fieldset>
 
                     <fieldset>
                         <legend>Outros</legend>
 
                         <label for="arquivo">Envie seu arquivo:</label><br>
-                        <input type="file" id="arquivo" name="arquivo" accept=".pdf,.doc,.docx"><br><br>
+                        <input type="file" name="arquivo" accept=".pdf,.doc,.docx"><br><br>
 
                         <label for="datalist">Escolha uma opção:</label><br>
-                        <input list="opcoes" id="datalist" name="datalist"><br>
-                        <datalist id="opcoes">
+                        <input list="opcoes" name="datalist"><br>
+                        <datalist>
                             <option value="Opção 1">
                             <option value="Opção 2">
                             <option value="Opção 3">
                         </datalist><br>
 
                         <label for="mensagem">Mensagem:</label><br>
-                        <textarea id="mensagem" name="mensagem" rows="4"
-                            placeholder="Digite sua mensagem..."></textarea><br><br>
+                        <textarea name="mensagem" rows="4" placeholder="Digite sua mensagem..."></textarea><br><br>
                     </fieldset>
 
                     <button type="submit">Enviar</button>
@@ -117,18 +104,14 @@
             <!-- 3. Mídia (Áudio, Vídeo) -->
             <section id="midia">
                 <h2>Elementos de Mídia</h2>
-                <p>HTML5 introduziu elementos nativos para áudio e vídeo:</p>
-
                 <h3>Vídeo</h3>
                 <video width="400" controls>
                     <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-                    Seu navegador não suporta o elemento de vídeo.
                 </video>
 
                 <h3>Áudio</h3>
                 <audio controls>
                     <source src="https://www.w3schools.com/html/horse.ogg" type="audio/ogg">
-                    Seu navegador não suporta o elemento de áudio.
                 </audio>
             </section>
 
