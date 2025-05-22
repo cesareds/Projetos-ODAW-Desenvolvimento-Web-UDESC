@@ -1,0 +1,129 @@
+<html>
+
+<head>
+    <title>Teste de CSS</title>
+    <!-- coloque o link do style sheet aqui;
+se você quiser salvar amostras diferentes de style sheets
+com nomes novos, mude o valor do href na tag de link
+para refletir a nova style sheet -->
+    <link rel="stylesheet" type="text/css" href="amostra1.css">
+    <link rel="stylesheet" type="text/css" href="externo.css">
+</head>
+
+<body bgcolor="White">
+    <!-- Abaixo se encontram os elementos necessários
+para serem vistos na folha de estilos amostra1.css.
+Na medida em que você for criando as suas próprias style sheets com
+outras tags e classes, você vai poder ir acrescentando mais
+elementos a esta página e ver as amostras dos seus estilos. -->
+    <h1>RESOLUCAO NO FINAL</h1>
+    <p class="first">
+        Esta é uma classe de parágrafo "first"</p>
+    <h2>RESOLUCAO NO FINAL</h2>
+    <p>Este é um parágrafo normal com texto em <b>negrito</b> e em
+        <i>itálico</i>.
+    </p>
+    <h3>RESOLUCAO NO FINAL</h3>
+    <ul>
+        <li>Este é um item de lista com um link <a href="css_test.html">vazio</a>.
+    </ul>
+    <pre>
+Aqui vai algum texto pré-formatado.
+</pre>
+    <table>
+        <tr>
+            <th>Um cabeçalho de tabela</th>
+        </tr>
+        <tr>
+            <td>Uma célula de tabela</td>
+        </tr>
+    </table>
+    <p class="last">E aqui está uma classe de parágrafo "last"</p>
+    <div class="ufo">esta é a classe ufo</div>
+    <div class="highlight">esta é a classe highlight</div>
+    <div class="nova-classe-1" id="novo-id-1">Esta é a nova classe 1, de novo id 1, usando a forma Externo</div>
+    <div class="nova-classe-2" id="novo-id-2">Esta é a nova classe 2, de novo id 2, usando a forma Interno tag Style
+    </div>
+    <div class="nova-classe-3" id="novo-id-3" style=" color: green; font-size: 70;">Esta é a nova classe 3, de novo id 3
+        usando a forma Inline</div>
+
+    <!-- Exemplo de uso de CSS puro -->
+    <div class="hover-box">
+        Passe o mouse aqui para mudar a cor!
+    </div>
+
+    <!-- Formulário com validação -->
+    <form id="formulario" onsubmit="return validarFormulario()">
+        <label for="campo1">Campo 1:</label>
+        <input type="text" id="campo1" required><br><br>
+
+        <label for="campo2">Campo 2:</label>
+        <input type="text" id="campo2" required><br><br>
+
+        <label for="campo3">Campo 3:</label>
+        <input type="text" id="campo3" required><br><br>
+
+        <label for="campo4">Campo 4:</label>
+        <input type="text" id="campo4" required><br><br>
+
+        <button type="submit">Enviar</button>
+    </form>
+
+    <!-- Saudação com base no horário -->
+    <script>
+        const nome = prompt("Por favor, informe seu nome:");
+        const dataAtual = new Date();
+        const horas = dataAtual.getHours();
+        const diasSemana = ['domingo', 'segunda-feira', 'terça-feira', 'quarta-feira', 'quinta-feira', 'sexta-feira', 'sábado'];
+        const saudacao = horas < 12 ? 'Bom dia' : (horas < 18 ? 'Boa tarde' : 'Boa noite');
+        const mensagem = `${saudacao}, ${nome}, hoje é ${diasSemana[dataAtual.getDay()]}, ${dataAtual.toLocaleDateString('pt-BR')}.`;
+        alert(mensagem);
+    </script>
+
+    <script>
+        function toggleCase(caseType) {
+            const fields = document.querySelectorAll('.text-field');
+            fields.forEach(field => {
+                if (caseType === 'uppercase') {
+                    field.value = field.value.toUpperCase();
+                } else if (caseType === 'lowercase') {
+                    field.value = field.value.toLowerCase();
+                }
+            });
+        }
+
+        function validarFormulario() {
+            const campos = document.querySelectorAll('#formulario input[required]');
+            for (let campo of campos) {
+                if (!campo.value.trim()) {
+                    alert('Erro: Todos os campos são obrigatórios!');
+                    return false;
+                }
+            }
+            alert('Sucesso: Todos os campos foram preenchidos!');
+            return true;
+        }
+    </script>
+</body>
+
+</html>
+
+<style>
+    .nova-classe-2 {
+        color: red;
+        font-size: 70;
+    }
+
+    .hover-box {
+        width: 200px;
+        height: 100px;
+        background-color: lightblue;
+        text-align: center;
+        line-height: 100px;
+        transition: background-color 0.3s ease;
+    }
+
+    .hover-box:hover {
+        background-color: lightgreen;
+    }
+</style>

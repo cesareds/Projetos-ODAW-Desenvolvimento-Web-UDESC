@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desenhos</title>
+    <link rel="stylesheet" type="text/css" href="amostra1.css">
+    <link rel="stylesheet" type="text/css" href="externo.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .nova-classe-2 {
+            color: red;
+            font-size: 70px;
+        }
+    </style>
+</head>
+
+<body class="bg-light">
+    <!-- 1. Tags Semânticas -->
+    <header class="bg-primary text-white py-3">
+        <div class="container">
+            <h1 class="text-center" style="color: black;">Desenhos</h1>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light mt-3">
+                <div class="container-fluid">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="#semantica">Semântica</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#formularios">Formulários</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#midia">Mídia</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#graficos">Gráficos</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container my-5">
+        <div class="alert alert-info" id="novo-id-1">Esta é a nova classe 1, de novo id 1, usando a forma Externo</div>
+        <div class="alert alert-danger" id="novo-id-2">Esta é a nova classe 2, de novo id 2, usando a forma Interno tag
+            Style</div>
+        <div class="alert alert-success" id="novo-id-3" style="color: green; font-size: 70px;">Esta é a nova classe 3,
+            de novo id 3 usando a forma Inline</div>
+
+        <div class="text-center my-4">
+            <img src="180px-Mr._Krabs_House.webp" alt="mr krabs" class="img-fluid rounded">
+        </div>
+
+        <article>
+            <section id="semantica" class="mb-5">
+                <h2 class="text-primary">Elementos Semânticos do HTML5</h2>
+                <details class="mt-3">
+                    <summary class="btn btn-secondary">Clique para ver exemplos de tags semânticas</summary>
+                    <ul class="list-group mt-3">
+                        <li class="list-group-item"><code>&lt;header&gt;</code> - Cabeçalho da página ou seção</li>
+                        <li class="list-group-item"><code>&lt;nav&gt;</code> - Área de navegação</li>
+                        <li class="list-group-item"><code>&lt;main&gt;</code> - Conteúdo principal</li>
+                        <li class="list-group-item"><code>&lt;article&gt;</code> - Conteúdo independente</li>
+                        <li class="list-group-item"><code>&lt;section&gt;</code> - Seção temática</li>
+                        <li class="list-group-item"><code>&lt;aside&gt;</code> - Conteúdo relacionado</li>
+                        <li class="list-group-item"><code>&lt;footer&gt;</code> - Rodapé</li>
+                        <li class="list-group-item"><code>&lt;figure&gt;</code> e <code>&lt;figcaption&gt;</code> - Para
+                            imagens e legendas</li>
+                        <li class="list-group-item"><code>&lt;time&gt;</code> - Para datas e horas</li>
+                        <li class="list-group-item"><code>&lt;mark&gt;</code> - <mark>Texto destacado</mark></li>
+                        <li class="list-group-item"><code>&lt;progress&gt;</code> - <progress value="75"
+                                max="100"></progress></li>
+                    </ul>
+                </details>
+            </section>
+
+            <section id="formularios" class="mb-5">
+                <h2 class="text-primary">Novos Elementos e Atributos de Formulários</h2>
+                <p>HTML5 trouxe vários novos tipos de input e atributos para formulários:</p>
+
+                <form id="advancedForm" class="row g-3">
+                    <fieldset class="col-md-6">
+                        <legend>Informações Pessoais</legend>
+
+                        <div class="mb-3">
+                            <label for="nome" class="form-label">Nome Completo:</label>
+                            <input type="text" name="nome" class="form-control" required placeholder="Digite seu nome"
+                                autofocus>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="email" class="form-label">E-mail:</label>
+                            <input type="email" name="email" class="form-control" required placeholder="seu@email.com">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="nascimento" class="form-label">Data de Nascimento:</label>
+                            <input type="date" name="nascimento" class="form-control">
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="col-md-6">
+                        <legend>Preferências</legend>
+
+                        <div class="mb-3">
+                            <label for="cor" class="form-label">Selecionar cor:</label>
+                            <input type="color" name="cor" class="form-control form-control-color" value="#ff0000">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="volume" class="form-label">Selecionar range:</label>
+                            <input type="range" name="volume" class="form-range" min="0" max="100" step="5" value="50">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="numero" class="form-label">Selecionar número:</label>
+                            <input type="number" name="numero" class="form-control" min="1" max="10" step="1">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="hora" class="form-label">Selecionar horário:</label>
+                            <input type="time" name="hora" class="form-control">
+                        </div>
+                    </fieldset>
+
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                        <button type="reset" class="btn btn-secondary">Limpar</button>
+                    </div>
+                </form>
+
+                <form id="urlForm" class="mt-5">
+                    <label for="url" class="form-label">Digite uma URL:</label>
+                    <input type="text" id="url" class="form-control" placeholder="https://exemplo.com">
+                    <button type="submit" class="btn btn-primary mt-3">Validar URL</button>
+                </form>
+            </section>
+
+            <section id="midia" class="mb-5">
+                <h2 class="text-primary">Elementos de Mídia</h2>
+                <h3>Vídeo</h3>
+                <video width="100%" controls class="rounded">
+                    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                </video>
+
+                <h3 class="mt-4">Áudio</h3>
+                <audio controls class="w-100">
+                    <source src="https://www.w3schools.com/html/horse.ogg" type="audio/ogg">
+                </audio>
+            </section>
+
+            <section id="graficos" class="mb-5">
+                <h2 class="text-primary">Elementos Gráficos</h2>
+
+                <h3>SVG</h3>
+                <p>Gráficos vetoriais escaláveis:</p>
+                <svg width="100%" height="200">
+                    <rect x="50" y="50" width="300" height="100" fill="#1e90ff" stroke="#333" stroke-width="2" rx="10"
+                        ry="10" />
+                    <circle cx="200" cy="100" r="40" fill="#ff6347" />
+                    <text x="200" y="105" font-family="Arial" font-size="20" text-anchor="middle"
+                        fill="white">SVG</text>
+                </svg>
+            </section>
+        </article>
+    </main>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2025 Exercício HTML5 Puro</p>
+        <a href="#" class="text-white">Voltar ao Topo</a>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+
+        // testa e-mail e data de nascimento
+        document.getElementById("advancedForm").addEventListener("submit", function (event) {
+            const email = document.querySelector("input[name='email']").value;
+            const nascimento = new Date(document.querySelector("input[name='nascimento']").value);
+            const hoje = new Date();
+
+            if (!email.includes("@")) {
+                alert("Erro: E-mail inválido!");
+                event.preventDefault();
+            } else if (nascimento > hoje) {
+                alert("Erro: A data de nascimento não pode ser no futuro!");
+                event.preventDefault();
+            } else {
+                alert("Formulário enviado com sucesso!");
+            }
+        });
+
+
+        // calcula idade
+        document.querySelector("input[name='nascimento']").addEventListener("change", function () {
+            const nascimento = new Date(this.value);
+            const hoje = new Date();
+            const idade = hoje.getFullYear() - nascimento.getFullYear();
+            const idadeCorreta = hoje < new Date(hoje.getFullYear(), nascimento.getMonth(), nascimento.getDate()) ? idade - 1 : idade;
+
+            alert(`Você tem ${idadeCorreta} anos.`);
+        });
+
+        // transforma nome em maiúsculas
+        document.querySelector("input[name='nome']").addEventListener("input", function () {
+            this.value = this.value.toUpperCase();
+        });
+
+        // boa tarde vs boa noite
+        window.addEventListener("load", function () {
+            const horas = new Date().getHours();
+            const saudacao = horas < 12 ? "Bom dia" : horas < 18 ? "Boa tarde" : "Boa noite";
+            alert(`${saudacao}, seja bem-vindo(a) à página de Desenhos!`);
+        });
+
+        // valida URL
+        document.getElementById("urlForm").addEventListener("submit", function (event) {
+            const url = document.getElementById("url").value;
+            const regex = /^(https?:\/\/)?([\w-]+)\.([a-z]{2,})([\/\w.-]*)*\/?$/;
+
+            if (!regex.test(url)) {
+                alert("Erro: URL inválida!");
+                event.preventDefault();
+            } else {
+                alert("URL válida!");
+            }
+        });
+    </script>
+</body>
+
+</html>
